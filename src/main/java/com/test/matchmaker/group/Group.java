@@ -10,6 +10,9 @@ import lombok.RequiredArgsConstructor;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * Группа с игроками, максимально схожими по своим характеристикам.
+ */
 @RequiredArgsConstructor
 public class Group {
 

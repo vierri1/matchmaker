@@ -1,10 +1,7 @@
 package com.test.matchmaker.group;
 
-import com.test.matchmaker.group.matcher.LatencyMatcher;
 import com.test.matchmaker.group.matcher.MatcherFactory;
 import com.test.matchmaker.group.statistics.StatisticsCalculator;
-import com.test.matchmaker.group.matcher.IMatcher;
-import com.test.matchmaker.group.matcher.SkillMatcher;
 import com.test.matchmaker.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

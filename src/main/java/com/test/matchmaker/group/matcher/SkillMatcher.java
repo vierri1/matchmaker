@@ -2,6 +2,9 @@ package com.test.matchmaker.group.matcher;
 
 import com.test.matchmaker.user.User;
 
+/**
+ * Матчер для проверки Skill игрока.
+ */
 public class SkillMatcher extends BaseMatcher {
 
     private final double baseSkill;

@@ -5,6 +5,9 @@ import com.test.matchmaker.user.User;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Сбор и обработка статистики по группе.
+ */
 public class GroupStatistics {
 
     private static final String STAT_PLACEHOLDER = "%s max:%f;min:%f;avg:%f\n";

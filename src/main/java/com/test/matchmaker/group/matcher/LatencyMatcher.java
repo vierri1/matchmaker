@@ -2,6 +2,9 @@ package com.test.matchmaker.group.matcher;
 
 import com.test.matchmaker.user.User;
 
+/**
+ * Матчер для проверки Latency игрока
+ */
 public class LatencyMatcher extends BaseMatcher {
 
     private final double baseLatency;

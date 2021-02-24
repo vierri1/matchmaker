@@ -9,17 +9,26 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+/**
+ * Класс для распределения игроков по подходящим группам.
+ * Игроки с наибольшим временем в очереди обрабатываются первыми.
+ */
 @RequiredArgsConstructor
 @Component
 public class GroupMaker {
 
     private final GroupFactory groupFactory;
 
+    /**
+     * Формирует группы заданного размера.
+     *
+     * @return полностью сформированные группы.
+     */
     public Set<Group> create(Set<User> users) {
         TreeSet<User> sortedUsers = new TreeSet<>(users);
         Set<Group> groups = new HashSet<>();
 
-        sortedUsers.iterator().forEachRemaining(user ->{
+        sortedUsers.iterator().forEachRemaining(user -> {
             boolean added = addToSuitableGroup(user, groups);
             if (!added) {
                 groups.add(groupFactory.create(user));
