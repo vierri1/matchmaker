@@ -20,7 +20,7 @@ public class MatchMaker {
      * Добавляет игроков в очередь на создание матча.
      */
     public synchronized void add(Set<User> users) {
-        userPool.removeAll(users);
+        removeDuplicates(users);
         userPool.addAll(users);
         make();
     }
@@ -37,5 +37,13 @@ public class MatchMaker {
         userPool.removeAll(group.getUsers());
         System.out.println("Match started");
         System.out.println(group);
+    }
+
+    /**
+     * Одни и те же игроки могут приходить с разными характеристиками.
+     * В очереди необходимо оставить более свежие данные.
+     */
+    private void removeDuplicates(Set<User> users) {
+        userPool.removeIf(users::contains);
     }
 }
